@@ -144,6 +144,12 @@ export const Footer: React.FC<FooterProps> = ({
         >
           <div className="flex flex-wrap items-center gap-6">
             <button
+              onClick={() => onNavigate('banque-privee')}
+              className="hover:underline cursor-pointer font-medium text-[#ECC246]"
+            >
+              {language === 'pt' ? 'Banca Privada' : language === 'en' ? 'Private Banking' : 'Banque Privée'}
+            </button>
+            <button
               onClick={() => onNavigate('maison')}
               className="hover:underline cursor-pointer"
             >
@@ -166,6 +172,12 @@ export const Footer: React.FC<FooterProps> = ({
               className="hover:underline cursor-pointer"
             >
               {t.taxPillars}
+            </button>
+            <button
+              onClick={() => onNavigate('admin')}
+              className="hover:underline cursor-pointer text-[#ECC246]/80 hover:text-[#ECC246]"
+            >
+              {language === 'pt' ? 'Consola Admin' : language === 'en' ? 'Admin Portal' : 'Console Admin'}
             </button>
           </div>
           <div className="text-[11px] uppercase tracking-[0.12em] opacity-80">

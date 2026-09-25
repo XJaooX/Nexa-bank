@@ -15,21 +15,22 @@ import {
   Download,
   LogOut,
   TrendingUp,
-  Cloud,
+  Vault,
+  Shield,
 } from 'lucide-react';
 
 interface EspacePriveModalProps {
   isOpen: boolean;
   onClose: () => void;
   language: Language;
-  onOpenDrive?: () => void;
+  onOpenAdmin?: () => void;
 }
 
 export const EspacePriveModal: React.FC<EspacePriveModalProps> = ({
   isOpen,
   onClose,
   language,
-  onOpenDrive,
+  onOpenAdmin,
 }) => {
   const t = translations[language].espacePriveModal;
 
@@ -174,31 +175,33 @@ export const EspacePriveModal: React.FC<EspacePriveModalProps> = ({
                 </div>
               </div>
 
-              {/* Google Drive Vault Sync Quick Card */}
-              {onOpenDrive && (
-                <div className="p-4 bg-[#141414] border border-[#ECC246]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <Cloud className="w-5 h-5 text-[#ECC246]" />
-                    <div>
-                      <div className="text-xs font-semibold text-[#F8F6F1]">
-                        Synchronisation Google Drive Activée
-                      </div>
-                      <div className="text-[11px] text-[#A3A099]">
-                        Consultez et sauvegardez vos actes patrimoniaux directement sur votre Google Drive.
-                      </div>
+              {/* Internal Nexa Sovereign Vault & Admin Access */}
+              <div className="p-4 bg-[#141414] border border-[#ECC246]/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <Vault className="w-5 h-5 text-[#ECC246] shrink-0" />
+                  <div>
+                    <div className="text-xs font-semibold text-[#F8F6F1] flex items-center gap-2">
+                      <span>Coffre-Fort Fiduciaire Souverain</span>
+                      <span className="text-[9px] px-1.5 py-0.5 bg-[#ECC246]/15 text-[#ECC246] border border-[#ECC246]/30">AES-256 Chiffré</span>
+                    </div>
+                    <div className="text-[11px] text-[#A3A099]">
+                      Conservation confidentielle hors-bilan sous droit suisse et continental.
                     </div>
                   </div>
+                </div>
+                {onOpenAdmin && (
                   <button
                     onClick={() => {
                       onClose();
-                      onOpenDrive();
+                      onOpenAdmin();
                     }}
-                    className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 bg-[#ECC246] text-black text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-[#FFE08E] transition-colors"
+                    className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 bg-[#1F1E1B] border border-[#ECC246]/60 text-[#ECC246] text-xs font-semibold uppercase tracking-wider cursor-pointer hover:bg-[#ECC246] hover:text-black transition-colors shrink-0"
                   >
-                    <span>Ouvrir Google Drive</span>
+                    <Shield className="w-3.5 h-3.5" />
+                    <span>Console Admin</span>
                   </button>
-                </div>
-              )}
+                )}
+              </div>
 
               {/* Asset Allocation Breakdown (Qualitative Tiers) */}
               <div className="space-y-4">

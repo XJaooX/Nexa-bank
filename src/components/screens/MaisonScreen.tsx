@@ -95,6 +95,26 @@ export const MaisonScreen: React.FC<MaisonScreenProps> = ({
         </div>
       </section>
 
+      {/* Visual Showcase - Hôtel Particulier Place Vendôme */}
+      <section className="relative w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pb-12 -mt-4">
+        <div className="relative overflow-hidden border border-[#2B2A26] aspect-[21/9] sm:aspect-[24/9] shadow-2xl">
+          <img
+            src="/src/assets/images/maison_nexa_hero_1790342757287.jpg"
+            alt="Siège Historique de Nexa Banque Privée - 12 Place Vendôme, Paris"
+            className="w-full h-full object-cover object-center filter brightness-90 hover:scale-105 transition-transform duration-700"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-6 md:p-10">
+            <span className="text-[11px] uppercase tracking-[0.2em] text-[#ECC246] font-semibold mb-2">
+              Hôtel Particulier • 12, Place Vendôme, Paris
+            </span>
+            <p className="font-serif text-lg md:text-2xl text-[#F8F6F1] max-w-2xl font-light italic">
+              « Une maison indépendante, un ancrage historique et une déontologie fiduciária inébranlable depuis plus d'un siècle. »
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Institutional Commitments */}
       <section
         className={`w-full py-16 border-y ${
