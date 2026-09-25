@@ -1,0 +1,6 @@
+{
+  "name": "Nexa Banque Privée",
+  "description": "Maison de haute banque et de gestion discrétionnaire de fortune. Préservation pérenne, souveraineté fiduciaire et ingénierie d'actifs stratégiques pour familles et institutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
